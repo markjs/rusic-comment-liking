@@ -44,11 +44,8 @@
 
 						{% if idea.custom6 == "comment" %}
 														
-							{% if idea.custom7 == parent_idea.id %}
-						
-						p<br>
-						{{idea.custom7}}<br>
-						{{parent_idea.id}}<br>
+							{% if idea.custom7 == parent_idea.id_as_string %}
+
 								{{idea.content | markdown}}
 								
 							{% endif %}
