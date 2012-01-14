@@ -1,15 +1,14 @@
 {% if space.ideas != empty %}
 
   {% for idea in space.ideas %}
-		{% if idea.title != "comment" %}
+		{% if idea.custom6 != "comment" %}
     <!-- ENTRY -->
     <div class="entry">
-      <h1 class="show">{{ idea.title }}</h1>
+      <h1 class="show"><a href="{{idea.permalink}}">{{ idea.title }}</a></h1>
       <div class="slide">
         <div class="content">
         {{ idea.content | markdown }}
         </div>
-        <a href="{{idea.permalink}}" title="permalink for {{%idea.title%}}" class="btn">go to page for this idea</a>
       </div>
 
     {% if idea.interested_users != empty %}
