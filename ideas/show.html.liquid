@@ -38,13 +38,13 @@
     <div id="comments">
         <h3>comments</h3>
 					
-					{% parent-idea = idea %}
+					{% assign parent_idea = idea %}
 					
 					{% for idea in space.ideas %}
 
 						{% if idea.custom6 == "comment" %}
 							
-							{% if idea.custom7 == parent-idea.id %}
+							{% if idea.custom7 == parent_idea.id %}
 						
 								{{idea.content | markdown}}
 								
