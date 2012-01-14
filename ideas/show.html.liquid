@@ -39,7 +39,7 @@
         <h3>comments</h3>
 					
 					{% assign parent_idea = idea %}
-					
+					{{parent_idea.title}}
 					{% for idea in space.ideas %}
 
 						{% if idea.custom6 == "comment" %}
