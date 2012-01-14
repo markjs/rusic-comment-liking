@@ -1,7 +1,7 @@
 {% if env == "development" %}
   {% assign asset_url="http://localhost:8080" %}
 {% else %}
-  {% assign asset_url="https://s3.amazonaws.com/rusic-ideas-theme" %}
+  {% # assign asset_url="https://s3.amazonaws.com/rusic-ideas-theme" %}
 {% endif %}
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
@@ -37,7 +37,7 @@
     {% endif %}
 
     <!-- Less -->
-    <link rel="stylesheet" href="{{ asset_url }}/stylesheets/ideas.css">
+    <link rel="stylesheet" href="{{ asset_url }}/stylesheets/ideas.css"> 
 
     <!-- Scripts -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
