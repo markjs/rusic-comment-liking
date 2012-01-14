@@ -37,6 +37,20 @@
 
     <div id="comments">
         <h3>comments</h3>
+
+					{% for idea-comment in space.ideas %}
+
+						{% if idea-comment.custom6 == "comment" %}
+							
+							{% if idea-comment.custom7 == idea.id %}
+						
+								{{idea-comment.content | markdown}}
+								
+							{% endif %}
+						
+						{% endif %}
+
+					{% endfor %}
         <!-- {% if current_user %}<a href="#comments-form" title="link to add a comment form for {{idea.title}}" class="btn">add comment</a>{% endif %}
         {% if idea.comments != empty %}
         <ol>
