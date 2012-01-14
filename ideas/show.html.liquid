@@ -37,7 +37,7 @@
 
     <div id="comments">
         <h3>comments</h3>
-        {% if current_user %}<a href="#comments-form" title="link to add a comment form for {{idea.title}}" class="btn">add comment</a>{% endif %}
+        <!-- {% if current_user %}<a href="#comments-form" title="link to add a comment form for {{idea.title}}" class="btn">add comment</a>{% endif %}
         {% if idea.comments != empty %}
         <ol>
             {% for comment in idea.comments %}
@@ -48,7 +48,7 @@
         <ol>
             <li><p>Nobody has commented here yet, maybe you could be the first?</p></li>
         </ol>
-        {% endif %}
+        {% endif %} -->
 
         {% if current_user %}
         <div id="comments-form">
@@ -65,7 +65,7 @@
               
 							<input name="idea[title]" type="hidden" value="comment">
 							<input type="hidden" name="idea[should_post_to_social]" value="0" />
-							<input type="hidden" name="idea[custom1]" value="{{idea.id}}">
+							<input type="hidden" name="idea[custom7]" value="{{idea.id}}">
 
               <input type="submit" value="add comment" class="btn primary submit" />
 
