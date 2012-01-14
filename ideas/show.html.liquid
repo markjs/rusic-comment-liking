@@ -37,7 +37,7 @@
 
     <div id="comments">
         <h3>comments</h3>
-					
+					<ul>
 					{% assign parent_idea = idea %}
 
 					{% for idea in space.ideas %}
@@ -45,14 +45,16 @@
 						{% if idea.custom6 == "comment" %}
 														
 							{% if idea.custom7 == parent_idea.id_as_string %}
-
-								{{idea.content | markdown}}
-								
+								<li>
+									{{idea.content | markdown}}
+									<a href="{{idea.like_link}}" data-method="post">Like ({{idea.likes}})</a>
+								</li>
 							{% endif %}
 						
 						{% endif %}
 
 					{% endfor %}
+					</ul>
         <!-- {% if current_user %}<a href="#comments-form" title="link to add a comment form for {{idea.title}}" class="btn">add comment</a>{% endif %}
         {% if idea.comments != empty %}
         <ol>
