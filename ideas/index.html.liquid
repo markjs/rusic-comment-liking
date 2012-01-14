@@ -1,7 +1,7 @@
 {% if space.ideas != empty %}
 
   {% for idea in space.ideas %}
-		{% if idea.custom7 != comment %}
+		{% if idea.custom7 != "comment" %}
     <!-- ENTRY -->
     <div class="entry">
       <h1 class="show">{{ idea.title }}</h1>
