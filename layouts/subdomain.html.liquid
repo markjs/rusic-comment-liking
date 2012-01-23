@@ -4,10 +4,7 @@
   {% assign asset_url="https://s3.amazonaws.com/rusic-ideas-theme" %}
 {% endif %}
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -18,38 +15,8 @@
         {{space.title}}
       {% endif %}
     </title>
-    <meta name="description" content="{{space.summary}}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if idea %}
-    <meta property="og:title" content="{{ idea.title }}"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:url" content="{{ idea.permalink }}"/>
-    <meta property="og:image" content="{{idea.images.first.square}}"/>
-    <meta property="og:site_name" content="{{ space.title }}"/>
-    <meta property="og:description" content="{{ idea.content }}" />
-    {% else %}
-    <meta property="og:title" content="{{space.title}}"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:url" content="{{ space.permalink }}"/>
-    <meta property="og:image" content="{{ space.ideas.first.images.first.square}}"/>
-    <meta property="og:site_name" content="{{space.title}}"/>
-    <meta property="og:description" content="{{space.summary}}" />
-    {% endif %}
 
-    <!-- Less -->
-    <!-- <link rel="stylesheet" href="{{ asset_url }}/stylesheets/ideas.css">  -->
-
-    <!-- Scripts -->
-    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script> -->
     {{ content_for_header }}
-    <!-- <script src="/assets/jquery.countdown.min.js"></script>
-    <script src="{{ asset_url }}/javascripts/scripts.js"></script> -->
-
-    <!-- Fav & touch icons -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
 		<link rel="stylesheet" href="http://rusic.jegsmith.com/style.css">
 		

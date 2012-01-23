@@ -1,5 +1,3 @@
-## Rusic - ideas theme
+## Rusic - comment liking
 
-Free theme to create and share ideas.
-
-See http://hq.rusic.com/theming for documentation on creating Rusic themes.
+Added the functionality to like comments on Rusic.
